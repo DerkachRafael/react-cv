@@ -1,56 +1,104 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import MenuItem from './sidebarNav';
+import Avatar from './avatar'
+//IMPORT ICONS
+import FaUser from 'react-icons/lib/fa/user';
+import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
+import FaLocationArrow from 'react-icons/lib/fa/location-arrow';
+import FaPencil from 'react-icons/lib/fa/pencil';
+import FaDiamond from 'react-icons/lib/fa/diamond';
+import FaSuitcase from 'react-icons/lib/fa/suitcase';
+import FaComment from 'react-icons/lib/fa/comment';
+
 
 export default class Sidebar extends Component {
 
     state = {
-        open: true
+        userImg: '',
+        userName: ''
     }
 
-    render(){
-        return(
+    componentDidMount() {
+        const url = 'https://randomuser.me/api/?gender=male';
+        fetch(url).then(response => response.json())
+            .then(res => {
+                const userName = `${res.results[0].name.first} ${res.results[0].name.last}`;
+                const userImg = res.results[0].picture.medium;
+
+                this.setState({
+                    userName,
+                    userImg
+                })
+            })
+    }
+
+    render() {
+        // const sizeIcon = 25;
+        const styleIcon = {
+            size: 26,
+            color: '#fff'
+        }
+        const menu = [
+            {
+                title: 'About me',
+                hash: 'aboutMe',
+                icon: <FaUser {...styleIcon}/>
+            },
+            {
+                title: 'Education',
+                hash: 'education',
+                icon: <FaGraduationCap {...styleIcon}/>
+            },
+            {
+                title: 'Experience',
+                hash: 'experience',
+                icon: <FaPencil {...styleIcon}/>
+            },
+            {
+                title: 'Portfolio',
+                hash: 'portfolio',
+                icon: <FaSuitcase {...styleIcon}/>
+            },
+            {
+                title: 'Skills',
+                hash: 'skills',
+                icon: <FaDiamond {...styleIcon}/>
+            },
+            {
+                title: 'Feedback',
+                hash: 'feedback',
+                icon: <FaComment {...styleIcon}/>
+            },
+            {
+                title: 'Contact',
+                hash: 'contact',
+                icon: <FaLocationArrow {...styleIcon}/>
+            }
+        ];
+
+        return (
             <div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, sint, soluta? Adipisci, cupiditate,
-                    dicta! Asperiores assumenda aut corporis ex iure libero molestias pariatur quos repellendus
-                    temporibus? Aut ipsum nobis reiciendis.
-                </div>
-                <div>Aliquid amet ea eligendi eum hic impedit numquam obcaecati vitae? A beatae culpa dignissimos nemo
-                    odio, optio quae quam quia repudiandae unde vel, veritatis! Blanditiis debitis eligendi hic vel
-                    vero?
-                </div>
-                <div>Ab, cum dolore dolores, eaque earum eius excepturi explicabo fugiat fugit id illo impedit ipsum
-                    laboriosam libero molestias officia porro quam quas quasi quis rem repudiandae temporibus, tenetur!
-                    Ipsa, recusandae.
-                </div>
-                <div>Alias consequatur consequuntur debitis ducimus eligendi facilis laudantium magni nam
-                    necessitatibus, nisi nostrum perferendis placeat praesentium provident quis reiciendis saepe,
-                    similique voluptate voluptatem voluptates. Libero nobis omnis optio quaerat vitae!
-                </div>
-                <div>Aperiam aut commodi delectus dolorem, earum, eum eveniet excepturi, incidunt libero magni minima
-                    modi molestiae rem repudiandae sequi sunt suscipit ut? Asperiores cupiditate dicta exercitationem
-                    facere natus odio veritatis voluptatum.
-                </div>
-                <div>Adipisci beatae dolore dolorum eligendi, error impedit in laboriosam modi non nostrum nulla odit
-                    optio perferendis similique sit soluta veritatis voluptatibus voluptatum! Distinctio impedit nisi
-                    rerum sapiente sequi, totam ullam.
-                </div>
-                <div>Architecto at beatae eius esse iusto molestiae possimus quibusdam similique vero voluptas. Adipisci
-                    dignissimos dolorum expedita hic ipsum neque, non nulla numquam obcaecati officiis perferendis
-                    perspiciatis qui quibusdam vel vitae.
-                </div>
-                <div>Accusamus aliquid amet consectetur dolor eius enim eos explicabo, hic libero minima nihil
-                    perferendis quis reprehenderit saepe, vel voluptatem voluptatibus! Atque excepturi exercitationem
-                    fuga in, ipsam mollitia quibusdam tempore unde.
-                </div>
-                <div>Aspernatur, consectetur consequatur dicta dolores ea facere fugit illum minus molestiae, mollitia
-                    nisi, perspiciatis quibusdam sed veniam voluptates. Aperiam commodi cum ex impedit, laudantium
-                    molestias quae? Accusamus laudantium porro quidem.
-                </div>
-                <div>Adipisci deserunt distinctio esse facere hic illo illum nesciunt nisi nobis officia, pariatur
-                    ratione sunt tempore totam ullam vero, voluptate. Accusantium amet deleniti, doloribus ipsum
-                    laudantium nobis quam quibusdam veritatis.
-                </div>
+                <button type="button"
+                        className={`btn-hamb btn-sidebar--${this.props.positionBtn}
+                       ${this.props.sidebarIsOpen ? 'btn-hamb--open' : 'btn-hamb--hide'}`}
+                        onClick={this.props.toggleSideBar}>
+                    <span className="btn-hamb__line btn-hamb__line--half btn-hamb__line--start">
+                    </span>
+                    <span className="btn-hamb__line">
+                    </span>
+                    <span className="btn-hamb__line btn-hamb__line--half btn-hamb__line--end">
+                    </span>
+                </button>
+                {
+                    <div className={`sidebar ${this.props.sidebarIsOpen ? 'sidebar--open' : 'sidebar--hide'}`}>
+                        <ul className="sidebar__list">
+                            <Avatar userName={this.state.userName} userImg={this.state.userImg}/>
+                            <MenuItem menu={menu}/>
+                        </ul>
+                    </div>
+                }
             </div>
         )
     }
-}
+                }

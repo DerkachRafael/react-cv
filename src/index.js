@@ -17,7 +17,7 @@ const NoMatch = () => {
 
 const Root = () => {
     return (
-        <Router>
+        <Router location="history">
             <div>
                 <Switch>
                     <Route exact path="/" component={Form}/>

@@ -7,7 +7,7 @@ import base from '../service/service';
 export default class Form extends React.Component {
 
     static propTypes = {
-        showPassword: bool.isRequired
+        showPassword: bool
     };
 
     static defaultProps = {
@@ -17,15 +17,16 @@ export default class Form extends React.Component {
     };
 
     state = {
-        //showPassword: this.props.showPassword,
+        showPassword: this.props.showPassword,
         uid: null,
         owner: null
     };
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.authenticate = this.authenticate.bind(this);
         this.authHandler = this.authHandler.bind(this);
+
     }
 
     goToCv(e) {
@@ -40,7 +41,7 @@ export default class Form extends React.Component {
 
     }
 
-    togglePswd(e) {
+    togglePswd = () =>{
         this.setState({
             showPassword: !this.state.showPassword
         })
@@ -78,7 +79,9 @@ export default class Form extends React.Component {
                 owner: data.owner || authData.user.uid
             });
         });
+        console.log(authData.user.ze.photoURL);
         this.props.history.push(`/user/${authData.user.displayName}`);
+
     }
 
     render() {

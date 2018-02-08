@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function AboutView(props) {
+export default function experienceView(props) {
     return (
-        <section id='AboutMe'>
+        <section id='experience'>
             <h2 className="title-section">
                 {props.title}
             </h2>
