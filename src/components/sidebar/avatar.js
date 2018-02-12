@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export default function Avatar(props) {
     const userName = props.userName;
     const img = props.userImg;

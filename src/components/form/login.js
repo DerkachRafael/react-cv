@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool } from 'prop-types';
+import {bool} from 'prop-types';
 //import LoginLinks from './loginWith';
 import {Redirect} from 'react-router-dom';
 import base from '../service/service';
@@ -22,6 +22,14 @@ export default class Form extends React.Component {
         owner: null
     };
 
+    componentDidMount() {
+        base.onAuth((user) => {
+            if (user) {
+                this.authHandler(null, {user});
+            }
+        });
+    }
+
     constructor(props) {
         super(props);
         this.authenticate = this.authenticate.bind(this);
@@ -41,7 +49,7 @@ export default class Form extends React.Component {
 
     }
 
-    togglePswd = () =>{
+    togglePswd = () => {
         this.setState({
             showPassword: !this.state.showPassword
         })
@@ -84,11 +92,17 @@ export default class Form extends React.Component {
 
     }
 
+    logOut = () => {
+        base.unauth();
+        this.setState({uid: null});
+    }
+
     render() {
         const togglePasswordTxt = this.state.showPassword ? 'Hide' : 'Show';
+        const LogOut = <button className="btn-logout" type="button" onClick={this.logOut}>LogOut</button>
 
         return (
-            <div>
+            <div className="wrap-form">
                 <form className="form"
                       onSubmit={(e) => this.goToCv(e)}
                       ref={form => this.form = form}>
@@ -111,34 +125,18 @@ export default class Form extends React.Component {
                                maxLength={20}
                                ref={inputPassword => this.userPassword = inputPassword}/>
                     </div>
-
-                    <button className="form__btn btn--primary"
-                            type="submit">
-                        Go! →
-                    </button>
+                    <div className="form__group">
+                        <button className="form__btn form__btn--fb"
+                                onClick={() => this.authenticate('facebook')}>
+                            Log In with Facebook
+                        </button>
+                        <button className="form__btn btn--primary"
+                                type="submit">
+                            Go! →
+                        </button>
+                    </div>
                 </form>
-
-                  <div>
-                      <button className="facebook"
-                              onClick={() => this.authenticate('facebook')}>
-                          Log In with Facebook
-                      </button>
-                  </div>
-
             </div>
         )
     }
 }
-
-/*Form.defaultProps = {
- showPassword: false
- };
-
- Form.propTypes = {
- showPassword: PropTypes.bool.isRequired,
- };
-
- // Form.contextTypes = {
- //     router: PropTypes.object
- // }
- */

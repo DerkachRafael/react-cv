@@ -1,0 +1,39 @@
+@import "../var.scss";
+
+.feedback {
+  &__item {
+    margin-bottom: 20px;
+    padding: 20px 0 20px;
+    position: relative;
+  }
+  &__photo {
+    margin-bottom: -30px;
+    width: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid;
+    z-index: 1;
+    height: 50px;
+  }
+  &__blockquote {
+    q {
+      display: block;
+      background: #eee;
+      margin-bottom: 10px;
+      position: relative;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  &__cite {
+    display: block;
+    padding: 0 0 0 60px;
+    font-size: 12px;
+  }
+  &__link {
+    margin: 0 5px;
+    color: $accent-color;
+  }
+}

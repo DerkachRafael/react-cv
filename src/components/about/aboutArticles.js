@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutView(props) {
     return (
-        <section id='AboutMe'>
+        <section id='aboutMe' className="section">
             <h2 className="title-section">
                 {props.title}
             </h2>

@@ -21,7 +21,7 @@ const Root = () => {
             <div>
                 <Switch>
                     <Route exact path="/" component={Form}/>
-                    <Route path="/user/:userId" component={App}/>
+                    <Route path="/user/:userId" component={App} className="tes"/>
                     <Route component={NoMatch}/>
                 </Switch>
             </div>

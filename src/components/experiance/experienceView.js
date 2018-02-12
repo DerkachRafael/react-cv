@@ -1,20 +1,35 @@
 import React from 'react';
+import {experienceInfo} from './experience';
+import {arr} from 'prop-types'
 
-export default function experienceView(props) {
+
+ExperienceView.defaultProps = {
+    experienceInfo
+};
+export default function ExperienceView({experienceInfo}) {
+    const renderInfo = experienceInfo.map((experience, index) =>
+        <div className="experience__row" key={index}>
+            <div className="experience__left">
+                <h4 className="title">
+                    {experience.company}
+                </h4>
+                <p className="experience__date">
+                    {experience.date}
+                </p>
+            </div>
+            <div className="experience__right">
+                <h4 className="experience__title title">
+                    {experience.jobTitle}
+                </h4>
+                <p className="experience__description">
+                    {experience.description}
+                </p>
+            </div>
+        </div>);
     return (
-        <section id='experience'>
-            <h2 className="title-section">
-                {props.title}
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam atque delectus,
-                doloremque, ea enim fugit ipsa iste maxime natus nesciunt non obcaecati officia qui sed sunt tenetur?
-                Illo, repellat!
-            </p>
-            <p>Atque aut beatae cupiditate debitis modi, obcaecati odio ratione reprehenderit ut voluptatibus!
-                Aliquid delectus dicta eaque explicabo magnam optio recusandae reiciendis repellat repudiandae. Alias
-                earum molestiae molestias rem reprehenderit. Tempore.
-            </p>
-
+        <section id='experience' className="experience">
+            <h2 className="title-section">Experience</h2>
+                {renderInfo}
         </section>
     )
 }

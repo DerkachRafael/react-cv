@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function EducationView(props) {
     return (
-        <section id='education'>
+        <section id='education' className="section">
             <h2 className="title-section">
                 {props.title}
             </h2>

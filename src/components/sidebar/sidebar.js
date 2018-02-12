@@ -1,15 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from './sidebarNav';
+import {styleIcon, menu} from './defaultMenu';
+import MenuItems from './sidebarNav';
 import Avatar from './avatar'
-//IMPORT ICONS
-import FaUser from 'react-icons/lib/fa/user';
-import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
-import FaLocationArrow from 'react-icons/lib/fa/location-arrow';
-import FaPencil from 'react-icons/lib/fa/pencil';
-import FaDiamond from 'react-icons/lib/fa/diamond';
-import FaSuitcase from 'react-icons/lib/fa/suitcase';
-import FaComment from 'react-icons/lib/fa/comment';
 
 
 export default class Sidebar extends Component {
@@ -17,7 +10,7 @@ export default class Sidebar extends Component {
     state = {
         userImg: '',
         userName: ''
-    }
+    };
 
     componentDidMount() {
         const url = 'https://randomuser.me/api/?gender=male';
@@ -34,49 +27,6 @@ export default class Sidebar extends Component {
     }
 
     render() {
-        // const sizeIcon = 25;
-        const styleIcon = {
-            size: 26,
-            color: '#fff'
-        }
-        const menu = [
-            {
-                title: 'About me',
-                hash: 'aboutMe',
-                icon: <FaUser {...styleIcon}/>
-            },
-            {
-                title: 'Education',
-                hash: 'education',
-                icon: <FaGraduationCap {...styleIcon}/>
-            },
-            {
-                title: 'Experience',
-                hash: 'experience',
-                icon: <FaPencil {...styleIcon}/>
-            },
-            {
-                title: 'Portfolio',
-                hash: 'portfolio',
-                icon: <FaSuitcase {...styleIcon}/>
-            },
-            {
-                title: 'Skills',
-                hash: 'skills',
-                icon: <FaDiamond {...styleIcon}/>
-            },
-            {
-                title: 'Feedback',
-                hash: 'feedback',
-                icon: <FaComment {...styleIcon}/>
-            },
-            {
-                title: 'Contact',
-                hash: 'contact',
-                icon: <FaLocationArrow {...styleIcon}/>
-            }
-        ];
-
         return (
             <div>
                 <button type="button"
@@ -94,11 +44,11 @@ export default class Sidebar extends Component {
                     <div className={`sidebar ${this.props.sidebarIsOpen ? 'sidebar--open' : 'sidebar--hide'}`}>
                         <ul className="sidebar__list">
                             <Avatar userName={this.state.userName} userImg={this.state.userImg}/>
-                            <MenuItem menu={menu}/>
+                            <MenuItems menu={menu}/>
                         </ul>
                     </div>
                 }
             </div>
         )
     }
-                }
+}

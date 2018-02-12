@@ -1,20 +1,34 @@
 import React from 'react';
+import {contactsInfo} from './contactInfo';
 
-export default function contacts(props) {
+Contacts.defaultProps = {
+    contactsInfo
+};
+
+export default function Contacts({contactsInfo}) {
+    const renderInfo = contactsInfo.map((contact, index) =>
+        <li className="contacts__item" key={index}>
+            <span className="contacts__ico">
+                {contact.icon}
+            </span>
+            <div className="contacts__info">
+                <h4 className="contacts__title title">
+                    {contact.title}
+                    <a href={contact.link}>
+                        {contact.link}
+                    </a>
+                </h4>
+            </div>
+        </li>
+    );
     return (
-        <section id='contacts'>
+        <section id='contact' className="section">
             <h2 className="title-section">
-                {props.title}
+                Contacts
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam atque delectus,
-                doloremque, ea enim fugit ipsa iste maxime natus nesciunt non obcaecati officia qui sed sunt tenetur?
-                Illo, repellat!
-            </p>
-            <p>Atque aut beatae cupiditate debitis modi, obcaecati odio ratione reprehenderit ut voluptatibus!
-                Aliquid delectus dicta eaque explicabo magnam optio recusandae reiciendis repellat repudiandae. Alias
-                earum molestiae molestias rem reprehenderit. Tempore.
-            </p>
-
+            <ul className="contacts">
+                {renderInfo}
+            </ul>
         </section>
     )
 }

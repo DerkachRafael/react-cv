@@ -1,8 +1,10 @@
+@import "../var.scss";
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: $sidebarWidth;
   bottom: 0;
   background: #000614;
   z-index: 10;
@@ -25,7 +27,7 @@
 .sidebar {
   width: 220px;
   transform: translateX(-220px);
-  transition: transform 400ms ease-in;
+  transition: transform 400ms;
   font: 15px/18px 'open_sansregular', 'Arial', 'Tahoma', sans-serif;
   border-top: 1px dashed #222935;
   &--open {
@@ -41,7 +43,7 @@
   &__link {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-decoration: none;
     color: #667081;
