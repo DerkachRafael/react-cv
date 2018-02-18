@@ -1,6 +1,5 @@
 import React from 'react';
 import {bool} from 'prop-types';
-//import LoginLinks from './loginWith';
 import {Redirect} from 'react-router-dom';
 import base from '../service/service';
 

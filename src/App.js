@@ -3,7 +3,6 @@ import Sidebar from './components/sidebar/sidebar'
 import './components/app.scss';
 import PropTypes from 'prop-types';
 import About from './components/about/about';
-import FaAngleUp from 'react-icons/lib/fa/angle-up';
 import base from './components/service/service';
 import Education from "./components/education/education";
 import ExperienceView from "./components/experiance/experienceView";
@@ -26,6 +25,7 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+        console.log(this.ref);
     }
 
     componentWillMount() {
@@ -39,7 +39,7 @@ class App extends Component {
             });
     }
 
-    submitSkills = (skill) =>{
+    submitSkills = (skill) => {
         const skills = {...this.state.skills};
         const timeStamp = Date.now();
         skills[`skill-${timeStamp}`] = skill;
@@ -69,8 +69,6 @@ class App extends Component {
 
 
     renderStorage(localStorageEducation, localStorageRefFeedback) {
-        // check localStorage
-
         localStorageEducation || localStorageRefFeedback && this.setState({
             education: JSON.parse(localStorageEducation),
             feedback: JSON.parse(localStorageRefFeedback)
@@ -96,7 +94,6 @@ class App extends Component {
             <div className="App">
                 <Sidebar toggleSideBar={this.toggleSideBar}
                          positionBtn='right'
-                         positionSidebar=""
                          sidebarIsOpen={sidebarIsOpen}/>
 
                 <div className={`container ${sidebarIsOpen ? 'container--slideIn' : ''}`}>
@@ -105,7 +102,7 @@ class App extends Component {
                     <Education education={this.state.education}
                                loading={this.state.loading}/>
                     <ExperienceView/>
-                        <SkillsForm submitSkills={this.submitSkills} skills={this.state.skills} />
+                    <SkillsForm submitSkills={this.submitSkills} skills={this.state.skills}/>
                     <Contact />
                     <Feedback feedback={this.state.feedback}/>
                 </div>

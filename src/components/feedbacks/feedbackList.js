@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FeedbackList = (props) => {
-    console.log(props.feedback);
     return (
         <li className="feedback__item" key={props.feedback.index}>
             <img className="feedback__photo"

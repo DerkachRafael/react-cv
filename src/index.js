@@ -27,7 +27,7 @@ const Root = () => {
             </div>
         </Router>
     )
-}
+};
 
 ReactDOM.render(
     <Root/>

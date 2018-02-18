@@ -3,7 +3,7 @@ import FeedbackList from './feedbackList';
 
 export default function Feedback(props) {
     const renderFeedback = props.feedback
-        .map((feedback, index) => <FeedbackList feedback={feedback} index={index}/>);
+        .map((feedback, index) => <FeedbackList feedback={feedback} key={index}/>);
     return (
         <section id='feedback' className="section">
             <h2 className="title-section">
