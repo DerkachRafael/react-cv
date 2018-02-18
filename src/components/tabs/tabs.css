@@ -1,0 +1,15 @@
+.tabs__item {
+  display: inline-block;
+  margin: 0 5px 0 0; }
+
+.tabs__btn {
+  color: #222935; }
+
+.tabs__content {
+  max-width: 600px;
+  width: 100%;
+  display: none; }
+  .tabs__content__box {
+    display: none; }
+    .tabs__content__box--active {
+      display: block; }

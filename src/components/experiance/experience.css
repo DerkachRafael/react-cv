@@ -1,0 +1,22 @@
+.experience__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 15px; }
+  .experience__row:first-of-type {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #26c17e;
+    padding-bottom: 15px; }
+
+.experience__left {
+  flex: 1; }
+
+.experience__right {
+  flex: 2; }
+
+.experience__title, .experience__date, .experience__title {
+  margin: 10px 0; }
+
+.experience__description {
+  padding-right: 25px; }

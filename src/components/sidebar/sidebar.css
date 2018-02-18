@@ -2,8 +2,55 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 220px;
   bottom: 0;
   background: #000614;
-  -webkit-transition: left 0.5s;
+  z-index: 10;
   transition: left 0.5s; }
+
+.btn-sidebar {
+  position: fixed;
+  top: 25px;
+  font-size: 30px; }
+  .btn-sidebar--left {
+    left: 0; }
+  .btn-sidebar--right {
+    right: 0; }
+
+.sidebar {
+  width: 220px;
+  transform: translateX(-220px);
+  transition: transform 400ms;
+  font: 15px/18px 'open_sansregular', 'Arial', 'Tahoma', sans-serif;
+  border-top: 1px dashed #222935; }
+  .sidebar--open {
+    transform: translateX(0); }
+  .sidebar--hide {
+    transform: translateX(-220px); }
+  .sidebar__item {
+    text-align: center;
+    border-bottom: 1px dashed #222935; }
+  .sidebar__link {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: #667081; }
+    .sidebar__link:hover {
+      color: #fff; }
+    .sidebar__link svg {
+      margin-right: 15px; }
+
+.avatar {
+  text-align: center;
+  margin: 25px 0; }
+  .avatar__img {
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 2px solid #fff; }
+  .avatar__title {
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px; }

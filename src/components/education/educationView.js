@@ -1,14 +1,13 @@
 import React from 'react';
 
-export default function AboutView(props) {
+export default function EducationView(props) {
     return (
-        <section id='aboutMe' className="section">
+        <section id='education' className="section">
             <h2 className="title-section">
                 {props.title}
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam atque delectus,
-                doloremque, ea enim fugit ipsa iste maxime natus nesciunt non obcaecati officia qui sed sunt tenetur?
-                Illo, repellat!
+            <p>
+                {props.item.title}
             </p>
             <p>Atque aut beatae cupiditate debitis modi, obcaecati odio ratione reprehenderit ut voluptatibus!
                 Aliquid delectus dicta eaque explicabo magnam optio recusandae reiciendis repellat repudiandae. Alias
