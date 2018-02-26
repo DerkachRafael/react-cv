@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb1a07d7-3049-4591-97c9-5b6b2732ed63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/feedbacks/info.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/form/formModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/form/loginWith.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/loading.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/scrollToTop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/education/education.js" afterPath="$PROJECT_DIR$/src/components/education/education.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/feedbacks/feedback.js" afterPath="$PROJECT_DIR$/src/components/feedbacks/feedback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/feedbacks/feedbackList.js" afterPath="$PROJECT_DIR$/src/components/feedbacks/feedbackList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/form/login.js" afterPath="$PROJECT_DIR$/src/components/form/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,6 +27,7 @@
               <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <marker date="1518974478000" expanded="true" signature="827:887" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -49,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -60,7 +48,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="171">
-                <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -73,7 +61,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding />
+              <folding>
+                <marker date="1518969462000" expanded="true" signature="354:2000" ph="{...}" />
+                <marker date="1518969462000" expanded="true" signature="465:1312" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/feedbacks/feedback.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
               <folding>
                 <marker date="1518969401000" expanded="true" signature="111:505" ph="{...}" />
               </folding>
@@ -126,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/form/login.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -671,15 +662,15 @@
       <option name="presentableId" value="Default" />
       <updated>1517765828027</updated>
       <workItem from="1517765830588" duration="65823000" />
-      <workItem from="1518968334670" duration="5100000" />
+      <workItem from="1518968334670" duration="5799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70923000" />
+    <option name="totallyTimeSpent" value="71622000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="717" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1027,7 +1018,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/form/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1045,7 +1036,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1054,7 +1045,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1518969462000" expanded="true" signature="354:2000" ph="{...}" />
+            <marker date="1518969462000" expanded="true" signature="465:1312" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,7 +1063,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/feedbacks/feedback.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
             <marker date="1518969401000" expanded="true" signature="111:505" ph="{...}" />
           </folding>
@@ -1098,6 +1092,7 @@
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <marker date="1518974478000" expanded="true" signature="827:887" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1106,7 +1101,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="171">
-            <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
